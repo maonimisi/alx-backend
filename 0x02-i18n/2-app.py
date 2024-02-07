@@ -26,7 +26,7 @@ app.config.from_object('1-app.Config')
 @app.route("/", strict_slashes=False)
 def index() -> str:
     "This rounte render 1-index.html from the templates directory"
-    return render_template('1-index.html')
+    return render_template('2-index.html')
 
 
 @babel.localeselector
