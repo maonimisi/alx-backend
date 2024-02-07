@@ -48,8 +48,8 @@ def get_locale() -> str:
 
 
 def get_user():
-    """Function that returns a user dictionary or None if the ID cannot be found
-    or if login_as was not passed."""
+    """Function that returns a user dictionary or None if the ID cannot be
+    found or if login_as was not passed."""
     user_id = request.args.get('login_as', None)
     if user_id:
         return users.get(int(user_id))
@@ -61,6 +61,7 @@ def before_request():
     """Function use the app.before_request decorator to make it be executed
     before all other functions"""
     g.user = get_user()
+
 
 if __name__ == '__main__':
     host = getenv("API_HOST", "0.0.0.0")
