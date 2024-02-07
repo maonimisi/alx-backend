@@ -50,7 +50,7 @@ def get_locale() -> str:
 def get_user():
     """Function that returns a user dictionary or None if the ID cannot be
     found or if login_as was not passed."""
-    user_id = request.args.get('login_as', None)
+    user_id = request.args.get('login_as')
     if user_id:
         return users.get(int(user_id))
     return None
