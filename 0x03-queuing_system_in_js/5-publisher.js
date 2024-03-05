@@ -1,5 +1,4 @@
 import redis from 'redis';
-import
 
 const client = redis.createClient();
 
