@@ -1,6 +1,5 @@
 import redis from 'redis';
 
-const a = 1
 const client = redis.createClient();
 
 (async () => {
